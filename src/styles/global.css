@@ -212,8 +212,8 @@ section {
 .service-box:hover .icon {
   background: #fff;
 }
-.service-box:hover .icon i {
-  color: #14279b;
+.service-box:hover .icon i, .service-box:hover a {
+  color: #14279b !important;
 }
 .service-box .icon i {
   font-size: 36px;
@@ -232,8 +232,9 @@ section {
 }
 
 .service-box:hover .title,
-.service-box:hover .description {
-  color: #fff;
+.service-box:hover .description,
+.service-box:hover a {
+  color: #fff !important;
 }
 
 .more-service-box {
@@ -284,7 +285,7 @@ section {
   background: #14279b;
 }
 
-.more-service-box:hover .more-service-box-card-title , .more-service-box:hover  .more-service-box-card-text{
+.more-service-box:hover .more-service-box-card-title , .more-service-box:hover  .more-service-box-card-text,  .more-service-box:hover  a{
   @apply text-white;
   color: white;
 }
