@@ -408,7 +408,7 @@ let hasShow = false;
       transitionName="slide-up"
       transitionDelay="300ms"
     >
-        <div class="flex items-center p-5 transition-all duration-300 bg-[#f6f6f6] hover:bg-[#eef7fc] ">
+        <div class="coreFeatureSection-container flex items-center p-5 transition-all duration-300 bg-[#f6f6f6] hover:bg-[#eef7fc] ">
           <i class="text-[32px] leading-[1] pr-2.5 material-symbols-outlined" style="color: #ffbb2c;">web</i>
           <h3 class="font-bold m-0 p-0 text-base leading-[1]"><a class="hover:text-[#14279b]" href="#">Web design</a></h3>
         </div>
@@ -477,7 +477,7 @@ let hasShow = false;
 
 <!-- ========== Contact Us section Start ========== -->
 <section id="contactUsSection" class=" contactUsSection">
-  <div class="containers">
+  <div class="containers mb-4">
     <AnimationCard
       className=" flex flex-col justify-center items-center pb-[30px] "
       transitionName="slide-up"
@@ -543,8 +543,6 @@ let hasShow = false;
   </div>
   
 </section>
-
-<!-- 
 <section id="contact" class="contact">
     <div class="container">
 
@@ -933,9 +931,36 @@ background: #fff;
 border-color: #ced4da;
 
 }
+
+.coreFeatureSection{
+  display: flex; 
+  padding: 1.25rem; 
+  align-items: center; 
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms; 
+  transition-duration: 300ms; 
+  background: #f6f6f6;
+}
+.coreFeatureSection:hover{
+  background-color: #eef7fc;
+}
+
+.coreFeatureSection i{
+  font-size: 32px;
+  padding-right: 0.625rem; 
+  color: 32px;
+  line-height:1;
+}
+
+.coreFeatureSection h3{
+  padding: 0; 
+  margin: 0; 
+  font-size: 1rem;
+  line-height: 1; 
+  font-weight: 700; 
+}
 </style>
-
-
 
 <script>
 
