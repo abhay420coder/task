@@ -45,15 +45,48 @@ section {
   monitor:max-w-[1320px]
   
   ;
+
+  	padding-left: 0.75rem;
+	padding-right: 0.75rem; 
 }
 
+@media (min-width: 576px) { 
+	.containers{
+		max-width: 540px;
+	}
+	
+}
+@media (min-width: 768px) { 
+	.containers{
+		max-width: 720px;
+	}
+	
+}
+@media (min-width: 992px) { 
+	.containers{
+		max-width: 960px;
+	}
+	
+}
+@media (min-width: 1200px) { 
+	.containers{
+		max-width: 1140px;
+	}
+	
+}
+@media (min-width: 1400px) { 
+	.containers{
+		max-width: 1320px;
+	}
+	
+}
 .primary-button {
   @apply bg-[#14279b] text-[#fff] py-[12px] px-[29px] ml-[30px] rounded-[50px];
-  /* background: #14279b; */
-  /* padding: 12px 29px; */
-  /* margin-left: 30px; */
-  /* border-radius: 50px;  */
-  /* color: #fff; */
+  background: #14279b;
+  padding: 12px 29px;
+  margin-left: 30px;
+  border-radius: 50px; 
+  color: #fff;
 }
 
 
@@ -209,6 +242,13 @@ section {
   padding: 160px 20px 20px 20px;
   position: relative;
   width: 100%;
+  position: relative; 
+	padding-left: 1.25rem;
+	padding-right: 1.25rem; 
+	padding-bottom: 1.25rem; 
+	padding-top: 10rem; 
+	border-style: none; 
+	width: 100%; 
 }
 
 .more-service-box-card-body{
@@ -246,10 +286,12 @@ section {
 
 .more-service-box:hover .more-service-box-card-title , .more-service-box:hover  .more-service-box-card-text{
   @apply text-white;
+  color: white;
 }
 
 .more-service-box-card-title a:hover{
-  @apply text-white
+  @apply text-white;
+  color: white;
 }
 
 
@@ -275,7 +317,7 @@ section {
 
 .form-group {
   @apply mb-5;
-  /* margin-bottom: 20px; */
+  margin-bottom: 20px;
 }
 
 .form-control {
@@ -283,8 +325,20 @@ section {
   text-[#212529] bg-[#fff] 
   bg-clip-padding border border-solid border-[#ced4da] shadow-none text-sm py-2.5 px-[15px] appearance-none ;
   transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-  /* border-radius: 0; */
-    /* box-shadow: none; */
-    /* font-size: 14px; */
-    /* padding: 10px 15px; */
+  display: block; 
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem; 
+  border-width: 1px; 
+  border-style: solid; 
+  width: 100%; 
+  font-size: 0.875rem;
+  line-height: 1.25rem; 
+  font-weight: 400; 
+  background-clip: padding-box; 
+  appearance: none; 
+  box-shadow: none; 
+  color: #212529;
+  background: #fff;
+  border-color: #ced4da;
+  
 }
