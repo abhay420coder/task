@@ -1,0 +1,631 @@
+---
+import HomeHeader from "../components/HomeHeader.astro";
+import AnimationCard from "../components/AnimationCard.astro";
+import HomeFooter from "../components/HomeFooter.astro";
+// import "../styles/global.css"
+
+let hasShow = false;
+---
+
+<!-- ========== Header section Start ========== -->
+<HomeHeader />
+<!-- ========== Header section End ========== -->
+
+<!-- ========== hero section Start ========== -->
+<section id="heroSection" class="heroSection containers flex items-center max-tabletLand:pt-[34rem] max-tabletPot:pt-[25rem]">
+  <div class="flex-[0.5] flex flex-col gap-2.5">
+    <AnimationCard className="flex items-start h-fit" transitionName="slide-up">
+      <h1 class="heroSectionH1 primary-font-family">
+        Grow your business with Akeshya
+      </h1>
+    </AnimationCard>
+    <AnimationCard
+      className="flex items-start "
+      transitionName="slide-up"
+      transitionDelay="400ms"
+    >
+      <h2 class="heroSectionH2 primary-font-family">
+        We are team of talented website designers, developers &amp; digital
+        marketeers
+      </h2>
+    </AnimationCard>
+    <AnimationCard
+      className="flex items-start "
+      transitionName="slide-up"
+      transitionDelay="800ms"
+    >
+      <a href="#about" class="secondary-button">Get Started</a>
+    </AnimationCard>
+  </div>
+  <div class="flex-[0.5]">
+    <AnimationCard 
+      transitionName="slide-left"
+      animationName="shakeY"
+      animationDuration="15s"
+      animationIterationCount="infinite"
+      animationDelay="300ms"
+      className="max-tabletLand:justify-center max-tabletLand:items-center flex"
+    >
+      <img src="/src/assets/img/hero-img.png" class="heroSectionImg" />
+    </AnimationCard>
+  </div>
+</section>
+
+
+<!-- ========== hero section End ========== -->
+
+<!-- ========== client section Start ========== -->
+<section id="clientSection" class="clientSection">
+  <div
+    class="containers grid grid-cols-6 max-tabletLand:grid-cols-3 max-tabletPot:grid-cols-2"
+  >
+    <AnimationCard
+      transitionName="zoom-in"
+      className="flex  justify-center items-center"
+    >
+      <img
+        src="/src/assets/img/client-1.png"
+        class="max-w-[40%] grayscale hover:grayscale-0 py-2.5"
+        alt=""
+        srcset=""
+      />
+    </AnimationCard>
+    <AnimationCard
+      transitionName="zoom-in"
+      className="flex justify-center items-center"
+    >
+      <img
+        src="/src/assets/img/client-2.png"
+        class="max-w-[40%] grayscale hover:grayscale-0 py-2.5"
+        alt=""
+        srcset=""
+      />
+    </AnimationCard>
+    <AnimationCard
+      transitionName="zoom-in"
+      className="flex justify-center items-center"
+    >
+      <img
+        src="/src/assets/img/client-3.png"
+        class="max-w-[40%] grayscale hover:grayscale-0 py-2.5"
+        alt=""
+        srcset=""
+      />
+    </AnimationCard>
+    <AnimationCard
+      transitionName="zoom-in"
+      className="flex justify-center items-center"
+    >
+      <img
+        src="/src/assets/img/client-4.png"
+        class="max-w-[40%] grayscale hover:grayscale-0 py-2.5"
+        alt=""
+        srcset=""
+      />
+    </AnimationCard>
+    <AnimationCard
+      transitionName="zoom-in"
+      className="flex justify-center items-center"
+    >
+      <img
+        src="/src/assets/img/client-5.png"
+        class="max-w-[40%] grayscale hover:grayscale-0 py-2.5"
+        alt=""
+        srcset=""
+      />
+    </AnimationCard>
+    <AnimationCard
+      transitionName="zoom-in"
+      className="flex justify-center items-center"
+    >
+      <img
+        src="/src/assets/img/client-6.png"
+        class="max-w-[40%] grayscale hover:grayscale-0 py-2.5"
+        alt=""
+        srcset=""
+      />
+    </AnimationCard>
+  </div>
+</section>
+
+
+<!-- ========== client section End ========== -->
+
+<!-- ========== about us section Start ========== -->
+<section id="aboutUsSection" class="aboutUsSection">
+  <div class="containers">
+    <AnimationCard
+      className=" flex justify-center items-center pb-[30px] "
+      transitionName="slide-up"
+    >
+      <h2 class="section-title mb-2">About Us</h2>
+    </AnimationCard>
+    <div class="flex gap-6 max-tabletLand:flex-col">
+      <AnimationCard className="pl-3" transitionName="slide-up">
+        <p class="mb-4">
+          We are Akeshya, a firm that specializes in web design and marketing.
+          We help transform ideas into reality with a team of passionate graphic
+          designers, web developers, and seasoned marketing advisors.
+        </p>
+        <ul class="flex flex-col gap-2.5">
+          <li>
+            <span class="material-symbols-outlined text-[#14279b]">
+              done_all
+            </span> We started with a simple idea: do what is best for the client.
+          </li>
+          <li>
+            <span class="material-symbols-outlined text-[#14279b]">
+              done_all
+            </span> Our methodical and individual approach to each project delivers
+            the finest possible results for your media.
+          </li>
+          <li>
+            <span class="material-symbols-outlined text-[#14279b]">
+              done_all
+            </span> Our day-to-day work is to solve your problems utilising the most
+            up-to-date, practical adaptive technology, and we have a lot of fun doing
+            it.
+          </li>
+        </ul>
+      </AnimationCard>
+      <AnimationCard transitionName="slide-up">
+        <p class="mb-4">
+          We're professional, but we're also friendly, and we'll always pay
+          attention to your concerns. We expect to work with innovative people
+          that have an open mind and are dedicated to making every idea a
+          reality. We want to hear from you if you're interested in SEO, have
+          Web Development ideas, or require a graphic designer who can match
+          your goals.
+        </p>
+        <a href="https://akeshya.com/#services" class="secondary-button"
+          >Learn More</a
+        >
+      </AnimationCard>
+    </div>
+  </div>
+</section>
+
+
+<!-- ========== about us section End ========== -->
+
+<!-- ========== Count section Start ========== -->
+<section id="countSection" class="countSection">
+  <div class="containers flex items-center gap-x-3 max-laptop:flex-col max-laptop:gap-y-6">
+    <AnimationCard
+      className=" flex justify-center items-center"
+      transitionName="slide-right"
+      delay="150ms"
+      >
+      <img src="/src/assets/svg/counts-img.svg" alt="" class="img-fluid">
+    </AnimationCard>
+    <AnimationCard
+      className=" grid grid-cols-2 gap-y-10 gapx-x-5 max-tabletPot:grid-cols-1 "
+      transitionName="slide-left"
+    >
+    <div class="count-box flex">
+      <i class="material-symbols-outlined text-[#14279b] text-4xl">sentiment_satisfied</i>
+      <div class="ml-5">
+        <span data-purecounter-start="0" data-purecounter-end="3835039" data-purecounter-duration="2" class="purecounter text-4xl leading-[30px] block font-bold text-[#222222]">0</span>
+        <p class="pt-[15px] text-sm text-[#484848] primary-font-family"><strong>Organic Reach</strong> (Global)</p>
+      </div>
+    </div>
+    <div class="count-box flex">
+      <i class="material-symbols-outlined text-[#14279b] text-4xl">article</i>
+      <div class="ml-5">
+        <span data-purecounter-start="0" data-purecounter-end="85" data-purecounter-duration="3" class="purecounter text-4xl leading-[30px] block font-bold text-[#222222]">0</span>
+        <p class="pt-[15px] text-sm text-[#484848] primary-font-family"><strong>Campaigns</strong></p>
+      </div>
+    </div>
+    <div class="count-box flex">
+      <i class="material-symbols-outlined text-[#14279b] text-4xl">schedule</i>
+      <div class="ml-5">
+        <span data-purecounter-start="0" data-purecounter-end="14081" data-purecounter-duration="3" class="purecounter text-4xl leading-[30px] block font-bold text-[#222222]">0</span>
+        <p class="pt-[15px] text-sm text-[#484848] primary-font-family"><strong>Watch Hours</strong> (Asia) </p>
+      </div>
+    </div>
+    <div class="count-box flex">
+      <i class="material-symbols-outlined text-[#14279b] text-4xl">language</i>
+      <div class="ml-5">
+        <span data-purecounter-start="0" data-purecounter-end="17" data-purecounter-duration="1" class="purecounter text-4xl leading-[30px] block font-bold text-[#222222]">0</span>
+        <p class="pt-[15px] text-sm text-[#484848] primary-font-family"><strong>Excellent CTR %</strong> (Asia) </p>
+      </div>
+    </div>
+    </AnimationCard>
+  </div>
+</section>
+
+
+
+<!-- ========== Count section End ========== -->
+
+<!-- ========== Services section Start ========== -->
+<section id="servicesSection" class="servicesSection">
+  <div class="containers">
+    <AnimationCard
+      className=" flex flex-col justify-center items-center pb-[30px] "
+      transitionName="slide-up"
+    >
+      <h2 class="section-title mb-2">Services</h2>
+      <p class="text-center">
+        Akeshya will serve as your consultant and development partner to help
+        you turn your idea into a reality.
+      </p>
+    </AnimationCard>
+
+    <div
+      class="grid grid-cols-4 max-tabletLand:grid-cols-2 max-tabletPot:grid-cols-1 gap-12"
+    >
+      <AnimationCard
+        className=" service-box "
+        transitionName="slide-up"
+        transitionDelay="100ms"
+      >
+          <div class="icon">
+            <i class="material-symbols-outlined">sports_basketball</i>
+          </div>
+          <h4 class="title"><a href="https://akeshya.com/">Design</a></h4>
+          <p class="description">
+            Our web design services can assist you in reclaiming your company's
+            online image. Your business will flourish on the Internet thanks to
+            the combination of style and technology we provide, as well as our
+            experience.
+          </p>
+      </AnimationCard>
+
+      <AnimationCard
+        className=" service-box"
+        transitionName="slide-up"
+        transitionDelay="200ms"
+      >
+          <div class="icon">
+            <i class="material-symbols-outlined">description</i>
+          </div>
+          <h4 class="title"><a href="https://akeshya.com/">Development</a></h4>
+          <p class="description">
+            Our development team can construct platforms to help your business
+            thrive by creating powerful customised solutions tailored to your
+            particular requirements. Akeshya makes use of established and
+            effective web development tools.
+          </p>
+      </AnimationCard>
+
+      <AnimationCard
+        className=" service-box"
+        transitionName="slide-up"
+        transitionDelay="300ms"
+      >
+          <div class="icon">
+            <i class="material-symbols-outlined">globe</i>
+          </div>
+          <h4 class="title"><a href="https://akeshya.com/">Marketing</a></h4>
+          <p class="description">
+            A beautiful website is the foundation of effective marketing. Our
+            customers achieve success where it counts—in the real world—by
+            combining our proven approach with our passion for improving
+            conversions and increasing ROI.
+          </p>
+      </AnimationCard>
+
+      <AnimationCard
+        className=" service-box"
+        transitionName="slide-up"
+        transitionDelay="400ms"
+      >
+          <div class="icon">
+            <i class="material-symbols-outlined">speed</i>
+          </div>
+          <h4 class="title"><a href="https://akeshya.com/">Support</a></h4>
+          <p class="description">
+            Since the beginning, we at Akeshya have specialised in website
+            maintenance. We recognise the significance of having your business
+            online 24 hours a day, seven days a week, and we've created a system
+            to ensure that we're always available.
+          </p>
+      </AnimationCard>
+    </div>
+  </div>
+</section>
+
+
+<!-- ========== Services section End ========== -->
+
+<!-- ========== Our More Services section Start ========== -->
+<section id="moreServicesSection" class="moreServicesSection">
+  <div class="containers">
+    <AnimationCard
+      className=" flex flex-col justify-center items-center pb-[30px] "
+      transitionName="slide-up"
+    >
+      <h2 class="section-title mb-2">Our Process</h2>
+      <p class="text-center">
+        Over the years we’ve evolved a tested method for attaining achievement for each one of our clients.
+      </p>
+    </AnimationCard>
+
+    <div class="grid grid-cols-2 max-tabletLand:grid-cols-1 max-tabletPot:grid-cols-1 gap-12">
+      <AnimationCard
+        className=" more-service-box "
+        transitionName="slide-up"
+        transitionDelay="100ms"
+      >
+        <div class="more-service-box-card-body">
+          <h5 class="more-service-box-card-title"><a href="#moreServicesSection">1. Planning</a></h5>
+          <p class="more-service-box-card-text">We help you turn all of your ideas into a digital product that meets all of your requirements. We begin each project by determining its scope and needs. This is done by collaborating closely with you to ensure that we're all on the same page.</p>
+          
+        </div>
+      </AnimationCard>
+      <AnimationCard
+        className=" more-service-box "
+        transitionName="slide-up"
+        transitionDelay="200ms"
+      >
+        <div class="more-service-box-card-body">
+          <h5 class="more-service-box-card-title"><a href="#moreServicesSection">2. Design</a></h5>
+          <p class="more-service-box-card-text"> We build our websites carefully through a series of workshops, wire-framing, and user experience (UX) sessions, resulting in a site that reinforces trust, conveys important brand messaging, and provides a return on innovation.</p>
+        </div>
+      </AnimationCard>
+      <AnimationCard
+        className=" more-service-box "
+        transitionName="slide-up"
+        transitionDelay="100ms"
+      >
+        <div class="more-service-box-card-body">
+          <h5 class="more-service-box-card-title"><a href="#moreServicesSection">3. Development</a></h5>
+          <p class="more-service-box-card-text">We provide extensive front-end and back-end development that allows your idea to stand alone. Our in-house developers work side-by-side with the artistic team to seek out natural breakpoints inside the content and order practicality based on acknowledged statistics.</p>
+        </div>
+      </AnimationCard>
+      <AnimationCard
+        className=" more-service-box "
+        transitionName="slide-up"
+        transitionDelay="200ms"
+      >
+        <div class="more-service-box-card-body">
+          <h5 class="more-service-box-card-title"><a href="#moreServicesSection"></a>4. Marketing</h5>
+          <p class="more-service-box-card-text">We come up with ideas and campaigns to help your business prosper online. Our campaigns and virtual approach have a verified tune report of accomplishing brilliant results, gathering new leads and site visitors in your website and assist them convert. </p>
+        </div>
+      </AnimationCard>
+    </div>
+  </div>
+</section>
+
+<!-- ========== Our More Services section End ========== -->
+
+<!-- ========== Our Core Features section Start ========== -->
+<section id="coreFeatureSection" class="coreFeatureSection">
+  <div class="containers">
+    <AnimationCard
+      className=" flex flex-col justify-center items-center pb-[30px] "
+      transitionName="slide-up"
+    >
+      <h2 class="section-title mb-2">Our Core Features</h2>
+      <p class="text-center">
+        Akeshya is a forward-thinking and intelligent design firm that is technically and creatively capable of transforming your brand into its best digital self. Our approach to design and development results in compelling, engaging branding and immersive digital experiences that provide a value for money.
+      </p>
+    </AnimationCard>
+
+    <AnimationCard 
+      className="grid grid-cols-4 max-tabletLand:grid-cols-3 max-tabletPot:grid-cols-1 gap-12"
+      transitionName="slide-up"
+      transitionDelay="300ms"
+    >
+        <div class="flex items-center p-5 transition-all duration-300 bg-[#f6f6f6] hover:bg-[#eef7fc] ">
+          <i class="text-[32px] leading-[1] pr-2.5 material-symbols-outlined" style="color: #ffbb2c;">web</i>
+          <h3 class="font-bold m-0 p-0 text-base leading-[1]"><a class="hover:text-[#14279b]" href="#">Web design</a></h3>
+        </div>
+
+        <div class="flex items-center p-5 transition-all duration-300 bg-[#f6f6f6] hover:bg-[#eef7fc] ">
+          <i class="text-[32px] leading-[1] pr-2.5 material-symbols-outlined" style="color: #5578ff;">developer_mode_tv</i>
+          <h3 class="font-bold m-0 p-0 text-base leading-[1]"><a class="hover:text-[#14279b]" href="#">Development</a></h3>
+        </div>
+
+        <div class="flex items-center p-5 transition-all duration-300 bg-[#f6f6f6] hover:bg-[#eef7fc] ">
+          <i class="text-[32px] leading-[1] pr-2.5 material-symbols-outlined" style="color: #e80368;">account_circle</i>
+          <h3 class="font-bold m-0 p-0 text-base leading-[1]"><a class="hover:text-[#14279b]" href="#">Branding</a></h3>
+        </div>
+
+        <div class="flex items-center p-5 transition-all duration-300 bg-[#f6f6f6] hover:bg-[#eef7fc] ">
+          <i class="text-[32px] leading-[1] pr-2.5 material-symbols-outlined" style="color: #e361ff;">play_circle</i>
+          <h3 class="font-bold m-0 p-0 text-base leading-[1]"><a class="hover:text-[#14279b]" href="#">Media buying</a></h3>
+        </div>
+
+        <div class="flex items-center p-5 transition-all duration-300 bg-[#f6f6f6] hover:bg-[#eef7fc] ">
+          <i class="text-[32px] leading-[1] pr-2.5 material-symbols-outlined" style="color: #47aeff;">saved_search</i>
+          <h3 class="font-bold m-0 p-0 text-base leading-[1]"><a class="hover:text-[#14279b]" href="#">Search engine</a></h3>
+        </div>
+
+        <div class="flex items-center p-5 transition-all duration-300 bg-[#f6f6f6] hover:bg-[#eef7fc] ">
+          <i class="text-[32px] leading-[1] pr-2.5 material-symbols-outlined" style="color: #ffa76e;">date_range</i>
+          <h3 class="font-bold m-0 p-0 text-base leading-[1]"><a class="hover:text-[#14279b]" href="#">Brand strategy</a></h3>
+        </div>
+
+        <div class="flex items-center p-5 transition-all duration-300 bg-[#f6f6f6] hover:bg-[#eef7fc] ">
+          <i class="text-[32px] leading-[1] pr-2.5 material-symbols-outlined" style="color: #dbce11;">location_on</i>
+          <h3 class="font-bold m-0 p-0 text-base leading-[1]"><a class="hover:text-[#14279b]" href="#">Local search marketing</a></h3>
+        </div>
+
+        <div class="flex items-center p-5 transition-all duration-300 bg-[#f6f6f6] hover:bg-[#eef7fc] ">
+          <i class="text-[32px] leading-[1] pr-2.5 material-symbols-outlined" style="color: #4233ff;">bar_chart_4_bars</i>
+          <h3 class="font-bold m-0 p-0 text-base leading-[1]"><a class="hover:text-[#14279b]" href="#">Lead Tracking &amp; Management </a></h3>
+        </div>
+
+        <div class="flex items-center p-5 transition-all duration-300 bg-[#f6f6f6] hover:bg-[#eef7fc] ">
+          <i class="text-[32px] leading-[1] pr-2.5 material-symbols-outlined" style="color: #b2904f;">contacts</i>
+          <h3 class="font-bold m-0 p-0 text-base leading-[1]"><a class="hover:text-[#14279b]" href="#">Contact management</a></h3>
+        </div>
+
+        <div class="flex items-center p-5 transition-all duration-300 bg-[#f6f6f6] hover:bg-[#eef7fc] ">
+          <i class="text-[32px] leading-[1] pr-2.5 material-symbols-outlined" style="color: #b20969;">disc_full</i>
+          <h3 class="font-bold m-0 p-0 text-base leading-[1]"><a class="hover:text-[#14279b]" href="#">Media management</a></h3>
+        </div>
+
+        <div class="flex items-center p-5 transition-all duration-300 bg-[#f6f6f6] hover:bg-[#eef7fc] ">
+          <i class="text-[32px] leading-[1] pr-2.5 material-symbols-outlined" style="color: #ff5828;">event_note</i>
+          <h3 class="font-bold m-0 p-0 text-base leading-[1]"><a class="hover:text-[#14279b]" href="#">Social scheduling</a></h3>
+        </div>
+
+        <div class="flex items-center p-5 transition-all duration-300 bg-[#f6f6f6] hover:bg-[#eef7fc] ">
+          <i class="text-[32px] leading-[1] pr-2.5 material-symbols-outlined" style="color: #29cc61;">ad</i>
+          <h3 class="font-bold m-0 p-0 text-base leading-[1]"><a class="hover:text-[#14279b]" href="#">Ad retargeting</a></h3>
+        </div>
+    </AnimationCard>
+
+  </div>
+</section>
+
+
+<!-- ========== Our Core Features section End ========== -->
+
+<!-- ========== Contact Us section Start ========== -->
+<section id="contactUsSection" class=" contactUsSection">
+  <div class="containers">
+    <AnimationCard
+      className=" flex flex-col justify-center items-center pb-[30px] "
+      transitionName="slide-up"
+    >
+      <h2 class="section-title mb-2">Contact Us</h2>
+    </AnimationCard>
+    <div class="flex flex-wrap gap-y-2">
+      <AnimationCard
+        className="!w-1/3 max-tabletPot:!w-1/2 max-mobileLand:!w-full px-3"
+        transitionName="slide-up"
+        transitionDelay="100ms"
+      >
+        <h3 class="text-[28px] mb-2.5 p-0 leading-[1] font-bold tracking-tighter-[1] text-[#14279b] ">Akeshya</h3>
+        <p class="text-sm leading-6 primary-font-family text-[#888]">Designers, developers  &amp;  marketeers capable of delivering solutions according to your needs,</p>
+      </AnimationCard>
+      <AnimationCard
+        className="!w-1/4 max-tabletPot:!w-1/2 max-mobileLand:!w-full px-3"
+        transitionName="slide-up"
+        transitionDelay="200ms"
+      >
+        <div class="flex items-start ju">
+          <i class="material-symbols-outlined text-[32px] text-[#14279b] ">location_on</i>
+          <p class="pl-2.5 pb-2.5  text-sm leading-7">26-2-789, 7th street, Jyothi Nagar, Nellore, Andhra Pradesh 524004</p>
+        </div>
+
+        <div class="flex items-center">
+          <i class="material-symbols-outlined text-[32px] text-[#14279b] ">outgoing_mail</i>
+          <p class="pl-2.5 pb-2.5 text-sm leading-7 ">info@akeshya.com</p>
+        </div>
+
+        <div class="flex items-center">
+          <i class="material-symbols-outlined text-[32px] text-[#14279b] ">call</i>
+          <p class="pl-2.5 pb-2.5  text-sm leading-7">+91 94942 40922 </p>
+        </div>
+      </AnimationCard>
+      <AnimationCard
+        className="!w-5/12 max-tabletPot:!w-full px-3"
+        transitionName="slide-up"
+        transitionDelay="300ms"
+      >
+        <form id="contactForm" class="contact-form" method="POST" name="contact"><input type="hidden" name="form-name" value="contact">
+          <div class="form-group">
+            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required="">
+          </div>
+          <div class="form-group">
+            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required="">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required="">
+          </div>
+          <div class="form-group">
+            <textarea class="form-control" name="message" rows="5" placeholder="Message" required=""></textarea>
+          </div>
+          <div class="my-3">
+            <div class="loading">Loading</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Your message has been sent. Thank you!</div>
+          </div>
+          <div class="text-center"><button class="primary-button" type="submit">Send Message</button></div>
+        </form>
+      </AnimationCard>
+    </div>
+  </div>
+  
+</section>
+
+<!-- 
+<section id="contact" class="contact">
+    <div class="container">
+
+      <div class="section-title aos-init" data-aos="fade-up">
+        <h2>Contact Us</h2>
+      </div>
+
+      <div class="row">
+
+        <div class="col-lg-4 col-md-6 aos-init" data-aos="fade-up" data-aos-transitionDelay="100">
+          <div class="contact-about">
+            <h3>Akeshya</h3>
+            <p>Designers, developers  &amp;  marketeers capable of delivering solutions according to your needs,</p>
+            
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mt-4 mt-md-0 aos-init" data-aos="fade-up" data-aos-transitionDelay="200">
+          <div class="info">
+            <div>
+               <i class="ri-map-pin-line"></i>
+              <p>26-2-789, 7th street, Jyothi Nagar, Nellore, Andhra Pradesh 524004</p>
+            </div>
+
+            <div>
+              <i class="ri-mail-send-line"></i>
+              <p>info@akeshya.com</p>
+            </div>
+
+            <div>
+              <i class="ri-phone-line"></i>
+              <p>+91 94942 40922 </p>
+            </div>
+
+          </div>
+        </div>
+        // form
+           <div class="col-lg-5 col-md-12 aos-init" data-aos="fade-up" data-aos-transitionDelay="300">
+          <form class="php-email-form" method="POST" name="contact"><input type="hidden" name="form-name" value="contact">
+            <div class="form-group">
+              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required="">
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required="">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required="">
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" name="message" rows="5" placeholder="Message" required=""></textarea>
+            </div>
+            <div class="my-3">
+              <div class="loading">Loading</div>
+              <div class="error-message"></div>
+              <div class="sent-message">Your message has been sent. Thank you!</div>
+            </div>
+            <div class="text-center"><button type="submit">Send Message</button></div>
+          </form>
+        </div>
+
+
+      </div>
+
+    </div>
+  </section> -->
+
+<!-- ========== Contact Us section End ========== -->
+
+<!-- ========== Footer section Start ========== -->
+<HomeFooter />
+<!-- ========== Footer section End ========== -->
+
+<style>
+  .contact-form .loading, .contact-form .error-message, .contact-form .sent-message {
+    display: none;
+    margin-top: 10px;
+  }
+</style>
+
+
+
+<script>
+
+</script>  
