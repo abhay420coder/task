@@ -1,154 +1,290 @@
-/*
-  The CSS in this style tag is based off of Bear Blog's default CSS.
-  https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
-  License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
- */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
-:root {
-	--accent: #2337ff;
-	--accent-dark: #000d8a;
-	--black: 15, 18, 25;
-	--gray: 96, 115, 159;
-	--gray-light: 229, 233, 240;
-	--gray-dark: 34, 41, 57;
-	--gray-gradient: rgba(var(--gray-light), 50%), #fff;
-	--box-shadow: 0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
-		0 16px 32px rgba(var(--gray), 33%);
+:root{
+  --primary-button-color : #14279b;
+  --secondary-button-color : #5faee3;
+
 }
-@font-face {
-	font-family: 'Atkinson';
-	src: url('/fonts/atkinson-regular.woff') format('woff');
-	font-weight: 400;
-	font-style: normal;
-	font-display: swap;
-}
-@font-face {
-	font-family: 'Atkinson';
-	src: url('/fonts/atkinson-bold.woff') format('woff');
-	font-weight: 700;
-	font-style: normal;
-	font-display: swap;
-}
+
 body {
-	font-family: 'Atkinson', sans-serif;
-	margin: 0;
-	padding: 0;
-	text-align: left;
-	background: linear-gradient(var(--gray-gradient)) no-repeat;
-	background-size: 100% 600px;
-	word-wrap: break-word;
-	overflow-wrap: break-word;
-	color: rgb(var(--gray-dark));
-	font-size: 20px;
-	line-height: 1.7;
-}
-main {
-	width: 720px;
-	max-width: calc(100% - 2em);
-	margin: auto;
-	padding: 3em 1em;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	margin: 0 0 0.5rem 0;
-	color: rgb(var(--black));
-	line-height: 1.2;
-}
-h1 {
-	font-size: 3.052em;
-}
-h2 {
-	font-size: 2.441em;
-}
-h3 {
-	font-size: 1.953em;
-}
-h4 {
-	font-size: 1.563em;
-}
-h5 {
-	font-size: 1.25em;
-}
-strong,
-b {
-	font-weight: 700;
-}
-a {
-	color: var(--accent);
-}
-a:hover {
-	color: var(--accent);
-}
-p {
-	margin-bottom: 1em;
-}
-.prose p {
-	margin-bottom: 2em;
-}
-textarea {
-	width: 100%;
-	font-size: 16px;
-}
-input {
-	font-size: 16px;
-}
-table {
-	width: 100%;
-}
-img {
-	max-width: 100%;
-	height: auto;
-	border-radius: 8px;
-}
-code {
-	padding: 2px 5px;
-	background-color: rgb(var(--gray-light));
-	border-radius: 2px;
-}
-pre {
-	padding: 1.5em;
-	border-radius: 8px;
-}
-pre > code {
-	all: unset;
-}
-blockquote {
-	border-left: 4px solid var(--accent);
-	padding: 0 0 0 20px;
-	margin: 0px;
-	font-size: 1.333em;
-}
-hr {
-	border: none;
-	border-top: 1px solid rgb(var(--gray-light));
-}
-@media (max-width: 720px) {
-	body {
-		font-size: 18px;
-	}
-	main {
-		padding: 1em;
-	}
+    font-family: "Open Sans", sans-serif;
+    color: #444444;
+    margin: 0px;
 }
 
-.sr-only {
-	border: 0;
-	padding: 0;
-	margin: 0;
-	position: absolute !important;
-	height: 1px;
-	width: 1px;
-	overflow: hidden;
-	/* IE6, IE7 - a 0 height clip, off to the bottom right of the visible 1px box */
-	clip: rect(1px 1px 1px 1px);
-	/* maybe deprecated but we need to support legacy browsers */
-	clip: rect(1px, 1px, 1px, 1px);
-	/* modern browsers, clip-path works inwards from each corner */
-	clip-path: inset(50%);
-	/* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
-	white-space: nowrap;
+a {
+  color: #14279b;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #5faee3;
+  text-decoration: none;
+}
+section {
+  padding: 60px 0; 
+  overflow: hidden;
+}
+
+.primary-font-family {
+  font-family: "Raleway", sans-serif;
+}
+
+.containers{
+
+  @apply 
+  px-3 
+  mx-auto 
+
+  mobileLand:max-w-[540px] 
+  tabletPot:max-w-[720px] 
+  tabletLand:max-w-[960px] 
+  laptop:max-w-[1140px] 
+  monitor:max-w-[1320px]
+  
+  ;
+}
+
+.primary-button {
+  @apply bg-[#14279b] text-[#fff] py-[12px] px-[29px] ml-[30px] rounded-[50px];
+  /* background: #14279b; */
+  /* padding: 12px 29px; */
+  /* margin-left: 30px; */
+  /* border-radius: 50px;  */
+  /* color: #fff; */
+}
+
+
+.primary-button:hover {
+  color: #fff;
+  background: #4aa3df;
+}
+.secondary-button {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 50px;
+  transition: 0.5s;
+  color: #14279b;
+  border: 2px solid #14279b;
+}
+
+
+.secondary-button:hover {
+  background: #14279b;
+  color: #fff;
+}
+#heroSection {
+  width: 100%;
+  height: 70vh;
+  /* margin-top: 70px; */
+}
+.heroSectionH1 {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #14279b;
+}
+.heroSectionH2 {
+  color: #484848;
+  margin: 0;
+  margin-bottom: 40px;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.clientSection {
+  background: #f3f9fd;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+  color: #222222;
+}
+
+.section-title::before,
+.section-title::after {
+  content: "";
+  width: 50px;
+  height: 2px;
+  background: #14279b;
+  display: inline-block;
+}
+
+.section-title::before {
+  margin: 0 15px 10px 0;
+}
+
+.section-title::after {
+  margin: 0 0 10px 15px;
+}
+
+.service-box {
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 0 29px 0 rgba(68, 88, 144, 0.12);
+  transition: all 0.3s ease-in-out;
+  border-radius: 8px;
+  z-index: 1;
+}
+
+.service-box::before {
+  content: "";
+  position: absolute;
+  background: #e1f0fa;
+  right: -60px;
+  top: -40px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  transition: all 0.3s;
+  z-index: -1;
+}
+
+.service-box:hover::before {
+  background: #14279b;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0px;
+}
+
+.service-box .icon {
+  margin: 0 auto 20px auto;
+  padding-top: 10px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  background: #14279b;
+  transition: all 0.3s ease-in-out;
+}
+
+.service-box:hover .icon {
+  background: #fff;
+}
+.service-box:hover .icon i {
+  color: #14279b;
+}
+.service-box .icon i {
+  font-size: 36px;
+  line-height: 1;
+  color: #fff;
+}
+.service-box .title {
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+.service-box .description {
+  font-size: 15px;
+  line-height: 28px;
+  margin-bottom: 0;
+}
+
+.service-box:hover .title,
+.service-box:hover .description {
+  color: #fff;
+}
+
+.more-service-box {
+  @apply border-none pt-40 px-5 pb-5 relative w-full ;
+  border: 0;
+  padding: 160px 20px 20px 20px;
+  position: relative;
+  width: 100%;
+}
+
+.more-service-box-card-body{
+  /* @apply  w-full z-10 rounded-md  py-[15px] px-[30px] bg-[#f6f6f6]; */
+
+  /* box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  transition: background ease-in-out 0.4s;
+  height: fit-content !important; */
+  z-index: 10;
+  background: #f6f6f6;
+  padding: 15px 30px;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  transition: ease-in-out 0.4s;
+  border-radius: 5px;
+}
+
+.more-service-box-card-title{
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.more-service-box-card-title a{
+  /* @apply ; */
+  font-size: 20px;
+}
+.more-service-box-card-text{
+  color: #5e5e5e;
+}
+
+.more-service-box:hover .more-service-box-card-body{
+  background: #14279b;
+}
+
+.more-service-box:hover .more-service-box-card-title , .more-service-box:hover  .more-service-box-card-text{
+  @apply text-white;
+}
+
+.more-service-box-card-title a:hover{
+  @apply text-white
+}
+
+
+@media (max-width: 992px) {
+  #heroSection {
+    flex-direction: column-reverse;
+  }
+  .heroSectionImg {
+    width: 50%;
+  }
+}
+@media (max-width: 768px) {
+  .heroSectionH1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  .heroSectionH2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+}
+
+.form-group {
+  @apply mb-5;
+  /* margin-bottom: 20px; */
+}
+
+.form-control {
+  @apply block w-full font-normal 
+  text-[#212529] bg-[#fff] 
+  bg-clip-padding border border-solid border-[#ced4da] shadow-none text-sm py-2.5 px-[15px] appearance-none ;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  /* border-radius: 0; */
+    /* box-shadow: none; */
+    /* font-size: 14px; */
+    /* padding: 10px 15px; */
 }
