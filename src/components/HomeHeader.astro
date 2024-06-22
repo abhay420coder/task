@@ -1,0 +1,191 @@
+---
+
+---
+<header class="  fixed-top " id="header-nav">
+    <div class="containers flex items-center justify-between header">
+
+        <a href="#home" class="logo primary-font-family flex items-center ">
+            <img src={'/src/assets/img/logo.png'} alt="" class="">
+            <span>AKESHYA</span>
+        </a>
+        
+        <nav id="navbar" class="navbar">
+            <div class="nav-link">
+                <a class="scrollto active" href="#heroSection">Home</a>
+                <a class="scrollto" href="#aboutUsSection">About</a>
+                <a class="scrollto" href="#servicesSection">Services</a>
+                <a class="scrollto  primary-button getstarted" href="#contactUsSection">Contact us</a>
+            </div>
+            <i id="nav-list" class="material-icons mobile-nav-toggle nav-list">menu</i>
+            
+        </nav>
+        
+    </div>
+</header>
+
+
+<style>
+    /*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+
+#header-nav{
+    width: 100%;
+    padding: 22px 0;
+    background-color: #f8f9fa;
+    transition: all 0.3s;
+}
+
+.header-scroll {
+    position: fixed;
+    padding: 12px 0 !important;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    z-index: 1000;
+}
+.logo img{
+    max-width: 65px;
+}
+
+.logo{
+    color: #14279b;
+    text-decoration: none;
+    font-size: 30px;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+
+.navbar{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+
+.scrollto{
+    padding: 10px 0 10px 30px;
+    font-size: 15px;
+    font-weight: 400;
+    color: #555555;
+    white-space: nowrap;
+    transition: 0.3s; 
+}
+.scrollto:hover,.scrollto:active{
+    color: #14279b;
+}
+
+#navbar > .nav-link > .scrollto.primary-button{
+    padding: 12px 29px;
+    color: #fff;
+}
+
+
+
+.mobile-nav-toggle{
+    color: #222222;
+    font-size: 28px;
+    cursor: pointer;
+    display: none;
+    line-height: 0;
+    transition: 0.5s;
+}
+@media (max-width: 991px) {
+    .navbar .nav-link{
+        display: none;
+    }
+    .navbar-x{
+        position: fixed;
+        overflow: hidden;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background: rgba(9, 9, 9, 0.9);
+        transition: 0.3s;
+        z-index: 999;
+        
+    }
+    .navbar-x .nav-link{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 55px;
+        right: 15px;
+        bottom: 15px;
+        left: 15px;
+        padding: 10px 0;
+        border-radius: 8px;
+        background-color: #fff;
+        overflow-y: auto;
+        transition: 0.3s;
+    }
+    .navbar-x .getstarted {
+        margin: 15px;
+        background: #14279b;
+        padding: 8px 25px;
+        border-radius: 50px;
+        color: #fff;
+    }
+    .mobile-nav-toggle {
+        display: block;
+    }
+    .nav-x{
+        display: block;
+        position: absolute;
+        z-index: 999;
+        top: 15px;
+        right: 15px;
+        color: #fff;
+        line-height: 1;
+    }
+}
+/**
+* Desktop Navigation 
+*/
+
+</style>
+
+<script>
+    let hasNavTogglrButtonAcive = false;
+    let navBarToggle = document.getElementById("nav-list")
+    let navBarDiv = document.getElementById("navbar")
+    navBarToggle?.addEventListener("click" , ()=>{
+        if(!hasNavTogglrButtonAcive){
+            navBarToggle.classList.add("nav-x")
+            navBarToggle.innerText="close"
+            navBarDiv?.classList.add("navbar-x")
+            hasNavTogglrButtonAcive=true;
+        }else{
+            navBarToggle.classList.remove("nav-x")
+            navBarToggle.innerText="menu"
+            navBarDiv?.classList.remove("navbar-x")
+            hasNavTogglrButtonAcive=false;
+        }
+
+    })
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const header = document.getElementById('header-nav');
+
+        // Add scroll event listener
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 0) {
+                header?.classList.add('header-scroll');
+            } else {
+                header?.classList.remove('header-scroll');
+            }
+        });
+    });
+</script>

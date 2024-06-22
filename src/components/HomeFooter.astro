@@ -1,0 +1,89 @@
+---
+
+---
+
+<footer id="footer-nav">
+    <div class="containers flex justify-between">
+        <div class="Copyright">
+            &copy; Copyright <strong>Akeshya</strong>. All Rights Reserved
+        </div>
+        <div class=" flex conditions-and-policy" >
+            <span class=""><a href="/src/assets/pdf/Terms and conditions Aksheya.pdf">Terms and conditions</a></span>
+            <span class=""><a href="/src/assets/pdf/Refund policy Aksheya.pdf">Refund policy</a></span>
+            <span class=""><a href="/src/assets/pdf/Privacy policy Aksheya.pdf">Privacy policy</a></span>
+        </div>
+        <button id="scrollToHeroButton" class="back-to-top">
+            <span class="material-symbols-outlined">
+            arrow_upward
+            </span>
+        </button>
+    </div>
+</footer>
+<style>
+#footer-nav {
+    /* height: 100px;
+    background-color: #6c757d; */
+    position: relative;
+    background: #fff;
+    box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+    padding: 30px 0;
+    color: #222222;
+    font-size: 14px;
+}
+.back-to-top {
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    z-index: 996;
+    background-color: #14279b;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 4px;
+    transition: all 400ms;
+    font-size: 28px;
+    color: #fff;
+    line-height: 0;
+    cursor: pointer;
+    display: none; /* Initially hidden */
+
+}
+.back-to-top:hover {
+    background: #57aae1;
+    color: #fff;
+}
+.back-to-top:active {
+    /* transform: translateY(3px); */
+    background: #57aae1;
+    color: #fff;
+}
+.conditions-and-policy{
+    gap:32px;
+    padding: 0px 32px 0px 16px;
+    height: 38px;
+}
+</style>
+<script>
+
+document.addEventListener('DOMContentLoaded', function() {
+        const header = document.getElementById('header-nav');
+        const scrollToHeroButton = document.getElementById('scrollToHeroButton');
+        const heroSection = document.getElementById('heroSection');
+
+        // Add scroll event listener
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 0) {
+                header?.classList.add('header-scroll');
+                scrollToHeroButton!.style.display = 'block';
+            } else {
+                header?.classList.remove('header-scroll');
+                scrollToHeroButton!.style.display = 'none';
+            }
+        });
+
+        // Add click event listener to the scroll-to-hero button
+            scrollToHeroButton?.addEventListener('click', function() {
+            heroSection?.scrollIntoView({ behavior: 'smooth' });
+        });
+});
+</script>

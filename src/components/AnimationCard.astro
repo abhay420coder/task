@@ -1,0 +1,110 @@
+---
+const { transitionName = "", className = "" ,transitionDelay="0ms" ,animationName="noAnimation" ,animationDuration="" , animationIterationCount="" , animationDelay="" } = Astro.props;
+---
+
+<div class={transitionName + " transitiona-block " + className} style={"transition-delay: "+ transitionDelay+" ;" + "animation-name: "+ animationName+" ;" + "animation-duration: "+ animationDuration+" ;" + "animation-iteration-count: "+ animationIterationCount+" ;" + "animation-delay: "+ animationDelay+" ;"}>
+    <slot />
+</div>
+
+<style>
+/*
+    shorthand to use single/multiple transition effect
+    transition: transition-property-1 transition-duration-1 transition-timing-function-1 transition-delay-1 , transition-property-2 transition-duration-2 transition-timing-function-2 transition-delay-2, transition-property-3 transition-duration-3 transition-timing-function-3 transition-delay-3, ....................., transition-property-N transition-duration-N transition-timing-function-N transition-delay-N; 
+*/
+
+/*
+The .block class sets up the initial state with opacity 0 and a transition.
+The .slide-up, .slide-right, .zoom-in, and .zoom-out classes define the initial transformations.
+The .show class removes the transformations and sets opacity to 1, triggering the animations.
+The .child elements follow the same pattern.
+*/
+
+.transitiona-block {
+    height: 100%;
+    width: 100%;
+    /* margin: 20px 0; */
+    opacity: 0;
+    transition: transform 1s, opacity 1s;
+    transition-delay: 100ms;
+
+}
+.transitiona-block.show { opacity: 1; }
+
+.transitiona-block.slide-up { transform: translateY(50px); }
+.transitiona-block.slide-up.show { transform: translateY(0); }
+
+.transitiona-block.slide-down { transform: translateY(-50px); }
+.transitiona-block.slide-down.show { transform: translateY(0); }
+
+.transitiona-block.slide-left { transform: translateX(50px); }
+.transitiona-block.slide-left.show { transform: translateX(0); }
+
+.transitiona-block.slide-right { transform: translateX(-50px); }
+.transitiona-block.slide-right.show { transform: translateX(0); }
+
+.transitiona-block.zoom-in { transform: scale(0.5); }
+.transitiona-block.zoom-in.show { transform: scale(1); }
+
+.transitiona-block.zoom-out { transform: scale(1.5); }
+.transitiona-block.zoom-out.show { transform: scale(1); }
+
+.transitiona-block > .child {
+    margin: 5px;
+    /* width: 30px;
+    height: 30px; */
+    opacity: 0;
+    transition: transform 1s, opacity 1s;
+}
+.transitiona-block > .child.show { opacity: 1; }
+
+
+@keyframes shakeY {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateY(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateY(10px);
+  }
+}
+
+@keyframes shakeX {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(10px);
+  }
+}
+
+
+</style>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const handleScroll = () => {
+        document.querySelectorAll('.transitiona-block').forEach(block => {
+            const rect = block.getBoundingClientRect();
+
+            // if block/div come on screen
+            if (rect.top < window.innerHeight && rect.bottom > 0) { 
+                block.classList.add('show');
+                // block.querySelectorAll('.child').forEach(child => {
+                //     child.classList.add('show');
+                // });
+            }
+
+        });
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Initial check on page load
+
+    return () => window.removeEventListener('scroll', handleScroll);
+});
+
+</script>
